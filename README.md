@@ -41,11 +41,11 @@ The **451** MVP should provide full CRUD capability on the back and front ends. 
 
 #### Wireframes
 
-![Desktop, Tablet, Mobile Wireframes](https://whimsical.com/ScSeu6rPJAHmDJwh9CWr8G)
+[Desktop, Tablet, Mobile Wireframes](https://whimsical.com/ScSeu6rPJAHmDJwh9CWr8G)
 
 #### Component Tree
 
-![Whimsical](https://whimsical.com/9eqjb1KmT8xjaoRw1EcRsp)
+[Whimsical](https://whimsical.com/9eqjb1KmT8xjaoRw1EcRsp)
 
 #### Component Hierarchy
 
@@ -115,7 +115,7 @@ src
 
 #### ERD Model
 
-![ERD Model fro 451](https://drive.google.com/file/d/1UymCL81Em1NH3RK7E4hr3E0-DhQyjj4h/view?usp=sharing)
+[ERD Model fro 451](https://drive.google.com/file/d/1UymCL81Em1NH3RK7E4hr3E0-DhQyjj4h/view?usp=sharing)
 
 <br>
 
