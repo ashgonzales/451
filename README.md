@@ -41,8 +41,6 @@ The **451** MVP should provide full CRUD capability on the back and front ends. 
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
-
 ![Desktop, Tablet, Mobile Wireframes](https://whimsical.com/ScSeu6rPJAHmDJwh9CWr8G)
 
 #### Component Tree
