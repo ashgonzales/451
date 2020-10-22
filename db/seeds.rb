@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Comment.destroy_all
+Book.destroy_all
+User.destroy_all
+
+@user = User.create(username: 'admin', email: 'admin@email.com', password: '123456')
+puts "#{User.count} users created"
+
+@book = Book.create(title: 'Coraline', author: 'Neil Gaiman', page: 12, content: 'A tad creepier than I anticipated?', location: 'Powell Bookstore', user: @user)
+puts "#{Book.count} books in your shelf"

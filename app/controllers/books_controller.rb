@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :update, :destroy]
+  before_action :authorize_request, only [:create, :update, :destroy]
 
   # GET /books
   def index
@@ -10,12 +11,13 @@ class BooksController < ApplicationController
 
   # GET /books/1
   def show
-    render json: @book
+    render json: @book, include: :comments
   end
 
   # POST /books
   def create
     @book = Book.new(book_params)
+    @food.user = @current_user
 
     if @book.save
       render json: @book, status: :created, location: @book
@@ -35,6 +37,14 @@ class BooksController < ApplicationController
     end
   end
 
+  def add_comment
+    @book = Book.find(params[:id])
+    @comment = Comment.find(params[:comment_id])
+    @book.comments << @comment
+
+    render json: @food, include: :flavors
+  end
+
   # DELETE /books/1
   def destroy
     @book.destroy
@@ -48,6 +58,6 @@ class BooksController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def book_params
-      params.require(:book).permit(:title, :author, :page, :content, :location)
+      params.require(:book).permit(:title, :author, :content, :page, :location)
     end
 end

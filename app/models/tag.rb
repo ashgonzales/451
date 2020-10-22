@@ -1,5 +1,5 @@
 class Tag < ApplicationRecord
-  belongs_to :book
+  belongs_to :books
   has_many :book_tags
   has_many :book, through: :book_tags
 
