@@ -1,5 +1,5 @@
 class Book < ApplicationRecord
-  attr_accessible :content, :author, :page, :location, :title, :tags_attributes
+  # attr_accessible :tags_attributes
 
   belongs_to :user
   has_many :comments, :dependent => :destroy
@@ -9,8 +9,8 @@ class Book < ApplicationRecord
   validates :title, :presence => true, :length => { :minimum => 3 }
   validates :author,  :presence => true
   validates :page, :presence => true
-  validates :content,  inclusion: { allow_blank: true }
-  validates :location,  inclusion: { allow_blank: true }
+  validates :content, :length => { :minimum => 3 }, allow_blank: true 
+  validates :location, :length => { :minimum => 3 }, allow_blank: true 
 
   accepts_nested_attributes_for :tags, :allow_destroy => :true,
   :reject_if => proc { |attrs| attrs.all? { |k, v| v.blank? } }
