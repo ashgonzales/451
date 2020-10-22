@@ -8,6 +8,7 @@ class Book < ApplicationRecord
 
   validates :title, :presence => true, :length => { :minimum => 3 }
   validates :author,  :presence => true
+  validates :img, :presence => true
   validates :page, :presence => true
   validates :content, :length => { :minimum => 3 }, allow_blank: true 
   validates :location, :length => { :minimum => 3 }, allow_blank: true 
