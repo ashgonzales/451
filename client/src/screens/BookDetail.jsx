@@ -33,6 +33,8 @@ export default function BookDetail(props) {
         book &&
         <>
           <h3>{book.title}</h3>
+          {book.author}
+          {book.page}
           {book.comments.map(comment => (
             <p key={comment.id}>{comment.content}</p>
           ))}

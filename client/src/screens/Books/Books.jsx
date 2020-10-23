@@ -12,7 +12,7 @@ export default function Books(props) {
         <div className="book-card">
           {books.map((book, idx) => (
             <Link to={`/book/${book.id}`} key={idx}>
-              <p key={book.id}>
+              <div key={book.id}>
                 <div className="card-img">
                   <img src={book.img} alt={book.title} className="book-img" />
                 </div>
@@ -24,7 +24,7 @@ export default function Books(props) {
                     {book.author}
                   </span>
                 </div>
-              </p>
+              </div>
             </Link>
           ))}
         </div>
