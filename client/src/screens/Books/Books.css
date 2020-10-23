@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Pontano+Sans&family=Syne&display=swap');
+
+.book-container {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.book-card {
+  width: 170px;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.book-card a{
+  color: #000000;
+  font-family: 'Syne', sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.card-img {
+  background-color: #EBE6DD;
+  border-radius: 5px;
+  margin-bottom: 0;
+}
+
+.book-img {
+  max-width: 45%;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+.card-text {
+    text-align: left;
+    padding-top: 10px;
+}
+
+.card-title {
+  font-weight: 900;
+}
+
+.card-author {
+  color: #353535;
+  font-style: italic;
+}
