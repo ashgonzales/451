@@ -64,6 +64,7 @@ export default function BookEdit(props) {
           <input
             type="image"
             name="img"
+            alt="book"
             value={formData.img}
             onChange={handleChange}
           />

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import './Register/Register.css';
 
 export default function Login(props) {
   const [formData, setFormData] = useState({

@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap");
+
+.create-container {
+  top: 75px;
+  margin: 20px auto;
+  max-width: 50%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-radius: 10px;
+  height: 600px;
+  display: grid;
+  z-index: 3;
+}
+
+.create-content {
+  font-family: "Carrois Gothic SC", sans-serif;
+  border-radius: 10px 10px 10px 10px;
+  position: relative;
+  background: linear-gradient(152deg, rgba(242,241,234,1) 33%, rgba(250,250,248,1) 81%);
+}
+
+.create-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-form h1 {
+  font-size: 2rem;
+  text-align: center;
+  width: 80%;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.create-inputs {
+  margin-bottom: 0.5rem;
+  max-width: 80%;
+}
+
+.create-inputs p {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  color: #f00e0e;
+}
+
+.create-label {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+  color: gray;
+}
+
+.create-input {
+  display: block;
+  padding-left: 10px;
+  border-radius: 4px;
+  height: 40px;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid rgb(197, 197, 197);
+}
+
+.create-input:focus {
+  outline: 1px solid rgb(187, 187, 187);
+}
+
+.create-input::placeholder {
+  color: #c5c5c5;
+  font-size: 12px;
+}
+
+.create-input-btn {
+  display: block;
+  margin-left: 13px;
+  width: 83%;
+  margin-top: 10px;
+  border-radius: 2px;
+  background: linear-gradient(
+    152deg,
+    rgba(144, 174, 172, 1) 28%,
+    rgba(187, 211, 211, 1) 73%
+  );
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  box-shadow: 0 0 20px #eee;
+}
+
+.create-input-btn:hover {
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+  background-position: right center;
+}
+
+.create-input-login {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: gray;
+  width: 80%;
+  text-align: center;
+}
+
+.create-input-login a {
+  text-decoration: none;
+  color: #016153;
+  font-weight: 600;
+}
+
+.form-input-btn {
+  display: block;
+  margin-left: 13px;
+  width: 83%;
+  margin-top: 10px;
+  border-radius: 2px;
+  background: linear-gradient(152deg, rgba(144,174,172,1) 28%, rgba(187,211,211,1) 73%);
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  box-shadow: 0 0 20px #eee;
+}
+
+.form-input-btn:hover {
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+  background-position: right center;
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    background: url(https://res.cloudinary.com/ashgon/image/upload/v1603650228/bookstore2_etkuzo.jpg);
+    background-size: cover;
+    max-width: 100%;
+    height: 100vh;
+  }
+
+  .create-container {
+    display: block;
+    max-width: 100%;
+    box-shadow: 0 0 0 0;
+    border-radius: 0;
+    height: 10px;
+    margin: 0 0;
+    opacity: 1;
+  }
+
+  /* .create-form h1 {
+    font-size: 2rem;
+    text-align: center;
+    width: 80%;
+    margin-bottom: 1rem;
+    color: black;
+  } */
+
+  .create-form {
+    padding: 0 18px;
+    background-color: white;
+    top: 20%;
+  }
+
+  .create-content {
+    font-family: "Carrois Gothic SC", sans-serif;
+    background: white;
+    border-radius: 10px 10px 0 0;
+    top: 80%;
+    box-shadow: 0px;
+  }
+}

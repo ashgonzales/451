@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap');
+
+.form-container {
+  margin: 30px auto;
+  max-width: 85%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-radius: 10px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.form-content-left {
+  background: rgb(178,145,201);
+  background: url(https://res.cloudinary.com/ashgon/image/upload/v1603650228/bookstore2_etkuzo.jpg);
+  background-size: cover;
+  border-radius: 10px 0 0 10px;
+  position: relative;
+}
+
+.signin-title {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.form-content-left h1,
+.form-content-left h2 {
+  font-family: 'Carrois Gothic SC', sans-serif;
+  text-align: center;
+}
+
+.form-content-left h1 {
+  margin-top: 8rem;
+}
+
+.form-content-left h2 {
+  margin-top: -0.8rem;
+}
+
+.form-success {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 80px;
+  color: #fff;
+}
+
+.form-content-right {
+  font-family: 'Carrois Gothic SC', sans-serif;
+  border-radius: 0 10px 10px 0;
+  position: relative;
+  background: rgb(242,241,234);
+  background: linear-gradient(152deg, rgba(242,241,234,1) 33%, rgba(250,250,248,1) 81%);
+}
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form h1 {
+  font-size: 2rem;
+  line-height: 1.2rem;
+  text-align: center;
+  width: 80%;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.form h2 {
+  font-size: 20px;
+  text-align: center;
+  line-height: -20px;
+  margin-bottom: 0;
+  width: 80%;
+  color: rgba(144,174,172,1);
+}
+
+.form-inputs {
+  margin-bottom: 0.5rem;
+  width: 80%;
+}
+
+.form-inputs p {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  color: #f00e0e;
+}
+
+.form-label {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+  color: gray;
+}
+
+.form-input {
+  display: block;
+  padding-left: 10px;
+  outline: none;
+  border-radius: 2px;
+  height: 40px;
+  width: 100%;
+  border: none;
+}
+
+.form-input:focus {
+  outline: 1px solid rgb(187, 187, 187);
+}
+
+.form-input::placeholder {
+  color: #c5c5c5;
+  font-size: 12px;
+}
+
+.form-input-btn {
+  display: block;
+  margin-left: 13px;
+  width: 83%;
+  margin-top: 10px;
+  border-radius: 2px;
+  background: linear-gradient(152deg, rgba(144,174,172,1) 28%, rgba(187,211,211,1) 73%);
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  box-shadow: 0 0 20px #eee;
+}
+
+.form-input-btn:hover {
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+  background-position: right center;
+}
+
+.form-input-login {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: gray;
+  width: 80%;
+  text-align: center;
+}
+
+.form-input-login a {
+  text-decoration: none;
+  color: #016153;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 375px) {
+
+  body {
+    background: url(https://res.cloudinary.com/ashgon/image/upload/v1603650228/bookstore2_etkuzo.jpg);
+    background-size: cover; 
+    max-width: 100%;
+    height: 100vh;
+  }
+
+  .form h1 {
+    font-size: 1rem;
+    text-align: center;
+    width: 80%;
+    margin-bottom: 1rem;
+    color: gray;
+  }
+
+  .form-container {
+    position: relative;
+    display: block;
+    max-width: 100%;
+    box-shadow: 0 0 0 0;
+    border-radius: 0;
+    height: 10px;
+    margin-top: 90px;
+    opacity: 1;
+  }
+
+  .form {
+    position: absolute;
+    margin-top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 18px;
+  }
+
+  .form-content-left {
+    display: none;
+  }
+
+  .form-content-right {
+    font-family: 'Carrois Gothic SC', sans-serif;
+    background: white;
+    border-radius: 10px 10px;
+    top: 80%;
+    box-shadow: 0px;
+  }
+}

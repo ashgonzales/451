@@ -24,7 +24,7 @@ class BooksController < ApplicationController
     @book.user = @current_user
 
     if @book.save
-      render json: @book, include: [:comments, :user], status: :created, location: @book
+      render json: @book, status: :created, location: @book
     else
       render json: @book.errors, status: :unprocessable_entity
     end
@@ -33,7 +33,7 @@ class BooksController < ApplicationController
   # PATCH/PUT /books/1
   def update
     if @book.update(book_params)
-      render json: @book, include: [:comments, :user]
+      render json: @book
     else
       render json: @book.errors, status: :unprocessable_entity
     end

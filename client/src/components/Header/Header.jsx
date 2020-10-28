@@ -1,12 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Header.css';
 
 export default function Header(props) {
   const { currentUser, handleLogout } = props;
 
   return (
-    <div>
-      <h1>451</h1>
+    <div className="header-container">
+      <div className="header-title">
+        <h1>La Vie des Livres</h1>
+      </div>
+      <div className="header-links">
       {
         currentUser ?
           <>
@@ -16,14 +20,7 @@ export default function Header(props) {
           :
           <Link to='/login'>Login/Register</Link>
       }
-      <hr />
-      {
-        currentUser &&
-        <>
-          <Link to='/books'>Library</Link>
-          <Link to='/comments'>Comments</Link>
-        </>
-      }
+      </div>
     </div>
   )
 }

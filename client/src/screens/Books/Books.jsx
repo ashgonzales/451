@@ -6,28 +6,24 @@ export default function Books(props) {
   const { books } = props;
 
   return (
-    <div>
+    <div className="books-div">
       <h3>Library</h3>
       <div className="book-container">
-        <div className="book-card">
           {books.map((book, idx) => (
-            <Link to={`/book/${book.id}`} key={idx}>
-              <div key={book.id}>
+            <Link to={`/books/${book.id}`} key={idx}>
                 <div className="card-img">
                   <img src={book.img} alt={book.title} className="book-img" />
                 </div>
                 <div className="card-text">
-                  <span className="card-title">{book.title}
+                  <span className="card-title">   {book.title}
                   </span>
                   <br />            
                   <span className="card-author">
                     {book.author}
                   </span>
                 </div>
-              </div>
             </Link>
           ))}
-        </div>
       </div>
     </div>
   );
