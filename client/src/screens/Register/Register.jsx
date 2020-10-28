@@ -15,7 +15,7 @@ const Register = () => {
       <div className='form-container'>
         <div className='form-content-left'>
           <h1>La Vie des Livres</h1>
-          <h2>share books you love</h2>
+          <h2>a book-sharing app</h2>
         </div>
         {!isSubmitted ? (
           <RegisterSignUp submitForm={submitForm} />
