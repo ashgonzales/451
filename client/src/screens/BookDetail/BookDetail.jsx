@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { addComment, getOneBook } from "../../services/books";
-import Comments from "../Comments";
+import { useParams, Link } from "react-router-dom";
+import BookCreate from '../BookCreate/BookCreate';
+import { getOneBook } from "../../services/books";
+import { FcInspection } from "react-icons/fc";
+import { TiDelete } from "react-icons/ti";
 import "./BookDetail.scss";
 
 export default function BookDetail(props) {
   const [book, setBook] = useState(null);
-  const [commentId, setCommentId] = useState("");
-  const { comments } = props;
+  // const [commentId, setCommentId] = useState("");
+  const { deleteBook } = props;
   const { id } = useParams();
 
   useEffect(() => {
@@ -18,60 +20,40 @@ export default function BookDetail(props) {
     fetchBook();
   }, [id]);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const bookItem = await addComment(id, commentId);
-    setBook(bookItem);
-  };
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   const bookItem = await addComment(id, commentId);
+  //   setBook(bookItem);
+  // };
 
   return (
-    <div className="container">
-      {book && (
-        <>
-          <div className="post">
-            <div className="header_post">
-              <img src={book.img} alt={book.title} className="bookdetail-img" />
-            </div>
-
-            <div className="body_post">
-              <div className="post_content">
-                <h1>{book.title}</h1>
-                <p>
-                  <span>User Comment:</span> {book.content}
-                </p>
-
-                <div className="container_infos">
-                  <div className="postedBy">
-                    <span>author</span>
-                    {book.author}
-                  </div>
-
-                  <div className="container_tags">
-                    <span>tags</span>
-                    <div className="tags">
-                      <ul>
-                        <li>fiction</li>
-                        <li>fantasy</li>
-                      </ul>
-                    </div>
-                  </div>
+    <div className="book-container">
+      { book
+        ? (
+          <>
+            <img
+              src={book.img}
+              alt={book.title} className="book-img" />
+            <div className="book-text">
+              <h2>{book.title}</h2>
+              <p>By: {book.author}</p>
+              <p>Currently on: {book.page}</p>
+              <div className="delete-btn">
+                <TiDelete size="20px" color="white" onClick={() => deleteBook(book.id)}></TiDelete>
+                <div className="edit-btn">
+                  <Link to={`/books/${book.id}/edit`}>
+                    <FcInspection color="white" size="18px" />
+                  </Link>
                 </div>
               </div>
             </div>
-          </div>
-        </>
-      )}
-      <div className="comment_post">
-        {
-          comments.map(comment => (
-            <p key={comment.id}>
-              {comment.user} commented:<br />
-              {comment.content}
-            </p>
-          ))
-        }
-      </div>
-      {/* <Comments /> */}
+          </>
+        )
+        : <Link to="/books/new">
+            <BookCreate />
+          </Link>
+      }
+
     </div>
   );
 }

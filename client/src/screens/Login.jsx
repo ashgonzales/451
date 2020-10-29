@@ -63,7 +63,7 @@ export default function Login(props) {
               onChange={handleChange}
             />
           </div>
-          <button className="form-input-btn" type="submit">
+          <button onClick={routeChange} className="form-input-btn" type="submit">
             Sign In
           </button>
           <span className='form-input-login'>

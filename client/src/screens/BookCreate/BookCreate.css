@@ -144,12 +144,12 @@
 }
 
 @media only screen and (max-width: 375px) {
-  body {
+  /* body {
     background: url(https://res.cloudinary.com/ashgon/image/upload/v1603650228/bookstore2_etkuzo.jpg);
     background-size: cover;
     max-width: 100%;
     height: 100vh;
-  }
+  } */
 
   .create-container {
     display: block;

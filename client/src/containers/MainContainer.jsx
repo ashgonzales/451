@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { getAllComments } from "../services/comments";
 import { getAllBooks, postBook, putBook, destroyBook } from "../services/books";
+import { verifyUser } from "../services/auth";
 import { Route, Switch, useHistory } from "react-router-dom";
-import { removeToken, verifyUser } from '../services/auth';
-import Layout from '../layouts/Layout';
 import Comments from "../screens/Comments";
 import Books from "../screens/Books/Books";
 import BookCreate from "../screens/BookCreate/BookCreate";
@@ -19,10 +18,10 @@ export default function MainContainer() {
   useEffect(() => {
     const handleVerify = async () => {
       const userData = await verifyUser();
-      setCurrentUser(userData)
-    }
+      setCurrentUser(userData);
+    };
     handleVerify();
-  }, [])
+  }, []);
 
   useEffect(() => {
     const fetchBooks = async () => {
@@ -36,12 +35,6 @@ export default function MainContainer() {
     fetchBooks();
     fetchComments();
   }, []);
-
-  const handleLogout = () => {
-    setCurrentUser(null);
-    localStorage.removeItem('authToken');
-    removeToken();
-  }
 
   const handleBookCreate = async (bookData) => {
     const newBook = await postBook(bookData);
@@ -70,7 +63,6 @@ export default function MainContainer() {
   };
 
   return (
-    <Layout currentUser={currentUser} handleLogout={handleLogout}>
       <Switch>
         <Route path="/comments">
           <Comments comments={comments} />
@@ -82,12 +74,11 @@ export default function MainContainer() {
           <BookEdit handleBookEdit={handleBookEdit} books={books} />
         </Route>
         <Route path="/books/:id">
-          <BookDetail comments={comments} deleteBook={deleteBook} />
+        <BookDetail currentUser={currentUser} comments={comments} deleteBook={deleteBook} />
         </Route>
         <Route path="/books">
           <Books books={books} />
         </Route>
       </Switch>
-    </Layout>
   );
 }
