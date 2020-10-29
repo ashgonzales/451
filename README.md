@@ -1,15 +1,15 @@
-# 451
+# La Vie des Livres
 
 ## Overview
 
-**451** is a social media app to share your favourite books and audiobooks with your friends and family. It is a full-stack MERN app that combines the power of Ruby on Rails and React.
+**La Vie des Livres** is a social media app to share your favourite books and audiobooks with your friends and family. It is a full-stack MERN app that combines the power of Ruby on Rails and React.
 
 
 <br>
 
 ## MVP
 
-The **451** MVP should provide full CRUD capability on the back and front ends. The fully-styled front end will include the ability to register, login, see a dashboard of RENDERED books from the Ruby on Rails API, CREATE new books, UPDATE/DELETE existing books, as well as make comments to other users.
+The **La Vie des Livres** MVP should provide full CRUD capability on the back and front ends. The fully-styled front end will include the ability to register, login, see a dashboard of RENDERED books from the Ruby on Rails API, CREATE new books, UPDATE/DELETE existing books, as well as make comments to other users.
 
 <br>
 
