@@ -40,25 +40,25 @@
   color: black;
 }
 
-.create-inputs {
+.edit-inputs {
   margin-bottom: 0.5rem;
   max-width: 80%;
 }
 
-.create-inputs p {
+.edit-inputs p {
   font-size: 0.8rem;
   margin-top: 0.5rem;
   color: #f00e0e;
 }
 
-.create-label {
+.edit-label {
   display: inline-block;
   font-size: 0.8rem;
   margin-bottom: 6px;
   color: gray;
 }
 
-.create-input {
+.edit-input {
   display: block;
   padding-left: 10px;
   border-radius: 4px;
@@ -68,11 +68,11 @@
   border: 1px solid rgb(197, 197, 197);
 }
 
-.create-input:focus {
+.edit-input:focus {
   outline: 1px solid rgb(187, 187, 187);
 }
 
-.create-input::placeholder {
+.edit-input::placeholder {
   color: #c5c5c5;
   font-size: 12px;
 }

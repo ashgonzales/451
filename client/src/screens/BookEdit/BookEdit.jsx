@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
+import "./BookEdit.css";
 
 export default function BookEdit(props) {
   const [formData, setFormData] = useState({
@@ -38,80 +39,93 @@ export default function BookEdit(props) {
 
   return (
     <div className="edit-container">
-    <div className="edit-content">
+      <div className="edit-content">
         <form
           className="edit-form"
-        onSubmit={(e) => {
-          e.preventDefault();
-          handleBookEdit(id, formData);
-          routeChange();
-        }}
-      >
-        <h3>Edit Book Details</h3>
-        <label>
-          Title:
-          <input
-            type="text"
-            name="title"
-            value={formData.title}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Author:
-          <input
-            type="text"
-            name="author"
-            value={formData.author}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Image URL:
-          <input
-            type="image"
-            name="img"
-            alt="book"
-            value={formData.img}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Page:
-          <input
-            type="number"
-            name="page"
-            value={formData.page}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Content:
-          <input
-            type="text"
-            name="content"
-            value={formData.content}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Location:
-          <input
-            type="text"
-            name="location"
-            value={formData.location}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <button>Edit</button>
-      </form>
+          onSubmit={(e) => {
+            e.preventDefault();
+            handleBookEdit(id, formData);
+            routeChange();
+          }}
+        >
+          <h3>Edit Book Details</h3>
+          <div className="edit-inputs">
+            <label className="edit-label">
+              Title:
+              <input
+                className="edit-input"
+                type="text"
+                name="title"
+                value={formData.title}
+                onChange={handleChange}
+              />
+            </label>
+          </div>
+          <div className="edit-inputs">
+            <label className="edit-label">
+              Author:
+              <input
+                className="edit-input"
+                type="text"
+                name="author"
+                value={formData.author}
+                onChange={handleChange}
+              />
+            </label>
+          </div>
+          <div className="edit-inputs">
+            <label className="edit-label">
+              Image URL:
+              <input
+                className="edit-input"
+                type="text"
+                name="img"
+                alt="book"
+                value={formData.img}
+                onChange={handleChange}
+              />
+            </label>
+          </div>
+          <div className="edit-inputs">
+            <label className="edit-label">
+              Page:
+              <input
+                className="edit-input"
+                type="number"
+                name="page"
+                value={formData.page}
+                onChange={handleChange}
+              />
+            </label>
+          </div>
+          <div className="edit-inputs">
+            <label className="edit-label">
+              Content:
+              <input
+                className="edit-input"
+                type="text"
+                name="content"
+                value={formData.content}
+                onChange={handleChange}
+              />
+            </label>
+          </div>
+          <div className="edit-inputs">
+            <label className="edit-label">
+              Location:
+              <input
+                className="edit-input"
+                type="text"
+                name="location"
+                value={formData.location}
+                onChange={handleChange}
+              />
+            </label>
+          </div>
+
+          <button>Edit</button>
+        </form>
       </div>
-      </div>
+    </div>
   );
 }
