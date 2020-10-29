@@ -52,7 +52,7 @@ export default function MainContainer() {
     history.push("/books");
   };
 
-  const deleteBook = async (id) => {
+  const handleDelete = async (id) => {
     await destroyBook(id);
     setBooks((prevState) =>
       prevState.filter((book) => {
@@ -74,7 +74,7 @@ export default function MainContainer() {
           <BookEdit handleBookEdit={handleBookEdit} books={books} />
         </Route>
         <Route path="/books/:id">
-        <BookDetail currentUser={currentUser} comments={comments} deleteBook={deleteBook} />
+        <BookDetail currentUser={currentUser} comments={comments} handleBookEdit={handleBookEdit} handleDelete={handleDelete} />
         </Route>
         <Route path="/books">
           <Books books={books} />

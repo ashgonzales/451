@@ -26,7 +26,9 @@ function Navbar(props) {
             {currentUser ? (
               <>
                 <p>{currentUser.username}</p>
-                <button onClick={handleLogout}>Logout</button>
+                <button
+                  className="navbar-btn"
+                  onClick={handleLogout}>Logout</button>
               </>
             ) : (
               <Link to="/login">Login/Register</Link>

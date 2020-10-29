@@ -32,6 +32,7 @@ export default function BookCreate(props) {
           onSubmit={(e) => {
             e.preventDefault();
             handleBookCreate(formData);
+            routeChange();
           }}
         >
           <h1>Add New Book</h1>
@@ -113,7 +114,7 @@ export default function BookCreate(props) {
               />
             </label>
           </div>
-          <button className="form-input-btn" onClick={routeChange}>Add Book</button>
+          <button className="form-input-btn">Add Book</button>
         </form>
       </div>
     </div>

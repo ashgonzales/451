@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Pontano+Sans&family=Syne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
 
 .books-div h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 30px;
   padding: 10px 20px;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 
 .book-container {
@@ -29,6 +31,9 @@
 .card-text {
     text-align: left;
     padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0;
+    margin-left: 0;
 }
 
 .card-title {

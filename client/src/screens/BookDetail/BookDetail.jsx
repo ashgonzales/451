@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import BookCreate from '../BookCreate/BookCreate';
 import { getOneBook } from "../../services/books";
-import { FcInspection } from "react-icons/fc";
-import { TiDelete } from "react-icons/ti";
-import "./BookDetail.scss";
+import "./BookDetail.css";
 
 export default function BookDetail(props) {
   const [book, setBook] = useState(null);
   // const [commentId, setCommentId] = useState("");
-  const { deleteBook } = props;
+  const { handleDelete } = props;
   const { id } = useParams();
 
   useEffect(() => {
@@ -27,33 +24,30 @@ export default function BookDetail(props) {
   // };
 
   return (
-    <div className="book-container">
-      { book
-        ? (
-          <>
-            <img
-              src={book.img}
-              alt={book.title} className="book-img" />
-            <div className="book-text">
-              <h2>{book.title}</h2>
-              <p>By: {book.author}</p>
-              <p>Currently on: {book.page}</p>
-              <div className="delete-btn">
-                <TiDelete size="20px" color="white" onClick={() => deleteBook(book.id)}></TiDelete>
-                <div className="edit-btn">
-                  <Link to={`/books/${book.id}/edit`}>
-                    <FcInspection color="white" size="18px" />
-                  </Link>
-                </div>
-              </div>
+    <div className="book-detail">
+      {book && (
+        <>
+          <img className="book-detail-img" src={book.img} alt={book.title} />
+          <div className="detail">
+            <div className="title">{book.title}</div>
+            <div className="author">{book.author}</div>
+            <div className="content">{book.content}</div>
+            <div className="button-container">
+              <button className="edit-button">
+                <Link className="edit-link" to={`/books/${book.id}/edit`}>
+                  Edit
+                </Link>
+              </button>
+              <button
+                className="delete-button"
+                onClick={() => handleDelete(book.id)}
+              >
+                Delete
+              </button>
             </div>
-          </>
-        )
-        : <Link to="/books/new">
-            <BookCreate />
-          </Link>
-      }
-
+          </div>
+        </>
+      )}
     </div>
   );
 }

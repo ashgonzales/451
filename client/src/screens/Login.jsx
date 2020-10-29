@@ -35,7 +35,9 @@ export default function Login(props) {
           onSubmit={(e) => {
             e.preventDefault();
             handleLogin(formData);
+            routeChange();
           }}
+
           className="form"
         >
           <h3>Share your favourite books. Do it.</h3>
@@ -63,7 +65,7 @@ export default function Login(props) {
               onChange={handleChange}
             />
           </div>
-          <button onClick={routeChange} className="form-input-btn" type="submit">
+          <button className="form-input-btn" type="submit">
             Sign In
           </button>
           <span className='form-input-login'>

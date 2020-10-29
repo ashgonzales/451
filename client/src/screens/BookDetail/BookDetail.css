@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
+
+.book-detail {
+  display: flex;
+  padding: 100px;
+  padding-top: 80px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+}
+
+.title {
+  font-family: 'Syne';
+  font-size: 40px;
+  letter-spacing: 1px;
+}
+
+.author {
+  font-family: 'Syne';
+  font-size: 28px;
+}
+
+.content {
+  font-family: 'Syne';
+  letter-spacing: .9px;
+}
+
+.book-detail-img {
+  width: 400px;
+  padding: 0 40px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.edit-button, .delete-button {
+  font-size: 22px;
+  font-family: 'Syne';
+  text-align: center;
+  align-self: center;
+  margin-top: 40px;
+  background-color: black;
+  color: white;
+  border: none;
+  box-shadow: 2px 2px 10px 2px #CECECE;
+  cursor: pointer;
+  padding: 10px 8px;
+}
+
+.edit-link {
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .title {
+      font-size: 32px;
+  }
+  .book-detail-img {
+      width: 400px;
+      margin-top: -100px;
+      padding: 10px;
+  }
+  .book-detail {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .book-detail {
+    display: block;
+  }
+
+  .book-detail-image {
+      width: 300px;
+      margin: 15px;
+      padding: 10px;
+  }
+  .product-detail {
+      padding: 0px;
+      padding-top: 120px;
+  }
+  .button-container {
+      padding: 20px;
+      padding-bottom: 80px;
+  }
+  .edit-button, .delete-button {
+      width: 40%;
+  }
+}
+
+@media (max-width: 375px) {
+  .book-detail {
+    display: block;
+    width: 90%;
+  }
+
+  .book-detail-image {
+      width: 200px;
+  }
+
+  .detail {
+    max-width: 80%;
+  }
+
+  .button-container {
+      padding: 20px;
+      padding-bottom: 80px;
+  }
+
+  .edit-button, .delete-button {
+      width: 40%;
+  }
+}
