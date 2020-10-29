@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap');
 
 .form-container {
-  /* margin: 30px auto; */
+  margin: 0 auto;
   max-width: 85%;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
   position: relative;

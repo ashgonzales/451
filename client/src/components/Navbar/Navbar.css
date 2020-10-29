@@ -27,6 +27,14 @@
   padding-right: 30px;
 }
 
+.username {
+  font-family: 'Carrois Gothic SC', sans-serif;
+  font-size: 19px;
+  color: rgb(228, 228, 228);
+  text-decoration: none;
+  padding-right: 30px;
+}
+
 .navbar h1{
   font-family: 'Carrois Gothic SC';
   color: white;

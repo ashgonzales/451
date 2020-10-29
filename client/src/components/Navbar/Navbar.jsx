@@ -25,7 +25,7 @@ function Navbar(props) {
           <div className="right-side">
             {currentUser ? (
               <>
-                <p>{currentUser.username}</p>
+                <p className="username">{currentUser.username}</p>
                 <button
                   className="navbar-btn"
                   onClick={handleLogout}>Logout</button>

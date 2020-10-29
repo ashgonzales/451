@@ -30,12 +30,20 @@ export default function BookEdit(props) {
     setFormData({ ...formData, [title]: value });
   };
 
+  const routeChange = () => {
+    let path = `/books/{book.id}/edit`;
+    history.push(path);
+  };
+
   return (
-    <div className="book-edit">
-      <form
+    <div className="edit-container">
+    <div className="edit-content">
+        <form
+          className="edit-form"
         onSubmit={(e) => {
           e.preventDefault();
           handleBookEdit(id, formData);
+          routeChange();
         }}
       >
         <h3>Edit Book Details</h3>
@@ -102,6 +110,7 @@ export default function BookEdit(props) {
         <br />
         <button>Edit</button>
       </form>
-    </div>
+      </div>
+      </div>
   );
 }
