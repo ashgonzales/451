@@ -100,4 +100,8 @@ span {
   .navbar {
     display: block;
   }
+
+  .right-side a{
+    display: none;
+  }
 }
