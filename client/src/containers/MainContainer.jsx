@@ -3,10 +3,9 @@ import { getAllComments } from "../services/comments";
 import { getAllBooks, postBook, putBook, destroyBook } from "../services/books";
 import { verifyUser } from "../services/auth";
 import { Route, Switch, useHistory } from "react-router-dom";
-import Comments from "../screens/Comments";
 import Books from "../screens/Books/Books";
 import BookCreate from "../screens/BookCreate/BookCreate";
-import BookEdit from "../screens/BookEdit";
+import BookEdit from "../screens/BookEdit/BookEdit";
 import BookDetail from "../screens/BookDetail/BookDetail";
 
 export default function MainContainer() {
@@ -64,9 +63,6 @@ export default function MainContainer() {
 
   return (
       <Switch>
-        <Route path="/comments">
-          <Comments comments={comments} />
-        </Route>
         <Route path="/books/new">
           <BookCreate handleBookCreate={handleBookCreate} />
         </Route>
