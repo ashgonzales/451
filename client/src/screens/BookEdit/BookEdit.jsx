@@ -7,8 +7,8 @@ export default function BookEdit(props) {
     title: "",
     author: "",
     img: "",
-    content: "",
     page: "",
+    content: "",
     location: "",
   });
   const { handleBookEdit, books } = props;
@@ -17,10 +17,10 @@ export default function BookEdit(props) {
 
   useEffect(() => {
     const prefillFormData = () => {
-      const { title, author, img, content, page, location } = books.find(
+      const { title, author, img, page, content, location } = books.find(
         (book) => book.id === Number(id)
       );
-      setFormData({ title, author, img, content, page, location });
+      setFormData({ title, author, img, page, content, location });
     };
     if (books.length) {
       prefillFormData();
@@ -28,8 +28,8 @@ export default function BookEdit(props) {
   }, [books, id]);
 
   const handleChange = (e) => {
-    const { title, value } = e.target;
-    setFormData({ ...formData, [title]: value });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
   const routeChange = () => {

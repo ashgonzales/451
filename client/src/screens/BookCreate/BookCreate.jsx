@@ -80,7 +80,7 @@ export default function BookCreate(props) {
               Page:
               <input
                 className="create-input"
-                type="integer"
+                type="number"
                 name="page"
                 placeholder="Current page you are on?"
                 value={formData.page}
